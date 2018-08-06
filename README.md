@@ -1,0 +1,1 @@
+# jhipster-monolithic-stock-demo
