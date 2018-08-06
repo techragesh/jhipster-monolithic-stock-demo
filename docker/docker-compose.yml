@@ -1,0 +1,19 @@
+version: '2'
+services:
+    stock-app:
+        image: stock
+        environment:
+            - SPRING_PROFILES_ACTIVE=prod,swagger
+            - SPRING_DATASOURCE_URL=jdbc:mysql://stock-mysql:3306/stock?useUnicode=true&characterEncoding=utf8&useSSL=false
+            - JHIPSTER_SLEEP=10
+        ports:
+            - 8080:8080
+    stock-mysql:
+        image: mysql:5.7.20
+        environment:
+            - MYSQL_USER=root
+            - MYSQL_ALLOW_EMPTY_PASSWORD=yes
+            - MYSQL_DATABASE=stock
+        command:             mysqld --lower_case_table_names=1 --skip-ssl
+            --character_set_server=utf8mb4 --explicit_defaults_for_timestamp
+    

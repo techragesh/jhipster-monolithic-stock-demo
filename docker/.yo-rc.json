@@ -1,0 +1,11 @@
+{
+  "generator-jhipster": {
+    "appsFolders": [
+      "monolithic-demo"
+    ],
+    "directoryPath": "../",
+    "monitoring": "no",
+    "serviceDiscoveryType": false,
+    "jwtSecretKey": "2c237b4fc22a1a19086f9578e62c0e691ecd4fde"
+  }
+}
